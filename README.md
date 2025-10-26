@@ -8,18 +8,21 @@
 
 ## Overview
 
-**Somnia Agent** is an advanced workflow automation platform that enables users to create visual, no-code workflows combining AI agents, blockchain interactions, and web automation. Built for the Somnia AI Hackathon, it demonstrates the power of autonomous on-chain AI agents.
+**Somnia Workflow Automation Platform** is a revolutionary no-code infrastructure for building autonomous AI agents on the Somnia blockchain. Built specifically for the Somnia AI Hackathon, this platform empowers developers and creators to design sophisticated AI-powered workflows that execute on-chain without writing a single line of code.
+
+Leveraging Somnia's high-performance EVM-compatible blockchain, our platform enables AI agents to interact with DeFi protocols, automate complex tasks, and execute transactions at unprecedented speed and scale.
 
 ### Key Features
 
-- **Visual Workflow Editor**: Drag-and-drop interface for creating complex automation workflows
-- **AI-Powered Agents**: Google Gemini 2.0 Flash agents with access to 23+ DeFi tools
-- **Multi-Chain Support**: 20+ EVM-compatible blockchains + NEAR Protocol
-- **Browser Automation**: Puppeteer-powered web scraping and interaction
-- **DeFi Integration**: GOAT SDK plugins for swaps, lending, NFTs, and more
-- **Flexible Triggers**: Manual execution, cron scheduling, or webhook triggers
-- **Marketplace**: Buy/sell workflows with on-chain payments
-- **Safe Wallet Support**: Multi-signature transaction execution
+- 🎨 **Visual Workflow Builder**: Drag-and-drop interface for creating complex AI agent workflows
+- 🤖 **AI-Powered Agents**: Google Gemini 2.0 Flash with autonomous decision-making
+- ⚡ **Somnia-Native**: Optimized for Somnia's high-speed, low-cost blockchain
+- 🔗 **23+ DeFi Plugins**: Integrated access to major DeFi protocols via GOAT SDK
+- 🌐 **Multi-Chain Support**: Primary support for Somnia, with compatibility for 20+ EVM chains
+- 🦾 **Browser Automation**: Puppeteer-powered web scraping and data extraction
+- ⏰ **Flexible Triggers**: Manual execution, cron scheduling, or webhook triggers
+- 🛒 **On-Chain Marketplace**: Smart contract-based workflow marketplace on Somnia
+- 🔐 **Safe Wallet Support**: Multi-signature transaction execution
 
 ---
 
@@ -111,15 +114,18 @@ Open [http://localhost:3000](http://localhost:3000) to see the app.
 
 ### Technology Stack
 
+- **Blockchain**: Somnia Testnet (Chain ID: 50312) - Primary blockchain
+- **Smart Contracts**: Solidity 0.8.20, Hardhat deployment framework
 - **Frontend**: Next.js 14, React 18, TypeScript
-- **UI**: Radix UI, TailwindCSS, XYFlow (React Flow)
+- **UI**: Radix UI, TailwindCSS, XYFlow visual workflow editor
 - **Backend**: Next.js Server Actions, API Routes
 - **Database**: PostgreSQL with Prisma ORM
-- **AI**: Google Gemini 2.0 Flash, OpenAI GPT-4o-mini
-- **Blockchain**: Viem, GOAT SDK, NEAR Protocol
-- **Authentication**: Clerk
-- **Payments**: Stripe
-- **Automation**: Puppeteer
+- **AI Models**: Google Gemini 2.0 Flash (primary), OpenAI GPT-4o-mini
+- **Web3**: Viem for EVM interactions, GOAT SDK for DeFi
+- **Multi-Chain**: Support for NEAR Protocol and 20+ EVM chains
+- **Authentication**: Clerk OAuth
+- **Payments**: Stripe + On-chain STT tokens
+- **Automation**: Puppeteer for browser automation
 
 ### Core Components
 
@@ -162,34 +168,32 @@ See [ARCHITECTURE.md](./ARCHITECTURE.md) for detailed documentation.
 
 ---
 
-## Supported Blockchains
+## Somnia Blockchain Integration
 
-### Mainnet
-- Ethereum
-- Base
-- Arbitrum
-- Polygon
-- Optimism
-- Avalanche
-- Celo
-- Linea
-- Gnosis
-- Sei
+### Primary Network: Somnia Testnet (Shannon)
 
-### Testnet
-- Sepolia
-- Base Sepolia
-- Arbitrum Sepolia
-- Polygon Mumbai
-- Optimism Sepolia
-- Avalanche Fuji
-- Celo Alfajores
-- Linea Sepolia
-- And more...
+**Why Somnia?**
+- ⚡ **10,000+ TPS**: Execute AI agent workflows at unprecedented speed
+- 💰 **Ultra-low fees**: Run complex agents without worrying about gas costs
+- 🔗 **EVM Compatible**: Seamless integration with existing DeFi protocols
+- 🌐 **Optimized for AI**: Perfect infrastructure for autonomous agents
 
-### Special Integrations
-- **NEAR Protocol**: Custom plugin with Ref Finance swaps
-- **Cross-chain**: Defuse Protocol for NEAR ↔ EVM bridging
+**Network Details:**
+- **Chain ID**: 50312
+- **RPC URL**: https://dream-rpc.somnia.network
+- **Explorer**: https://shannon-explorer.somnia.network
+- **Native Token**: STT (Somnia Test Tokens)
+- **Faucet**: https://testnet.somnia.network/
+
+### Multi-Chain Compatibility
+
+While optimized for Somnia, the platform supports:
+
+**EVM Mainnets**: Ethereum, Base, Arbitrum, Polygon, Optimism, Avalanche, Celo, Linea, Gnosis, Sei
+
+**EVM Testnets**: Sepolia, Base Sepolia, Arbitrum Sepolia, Polygon Mumbai, and more
+
+**Special**: NEAR Protocol integration with Ref Finance DEX and cross-chain bridging
 
 ---
 
@@ -205,30 +209,34 @@ Available integrations:
 
 ---
 
-## Usage Examples
+## Usage Examples on Somnia
 
-### Example 1: Price Monitoring Bot
+### Example 1: Somnia DeFi Portfolio Manager
 
-Create a workflow that:
-1. Checks token price via CoinGecko plugin
-2. Sends Telegram alert if threshold crossed
-3. Runs every 5 minutes via cron
+Create an AI agent that:
+1. Monitors your Somnia wallet portfolio in real-time
+2. AI analyzes token performance using CoinGecko + Birdeye
+3. Executes rebalancing swaps on Somnia DEXs
+4. Sends performance reports via Telegram
+5. All transactions on Somnia for ultra-low fees
 
-### Example 2: Automated Trading
+### Example 2: High-Frequency Price Arbitrage
 
-Create a workflow that:
-1. Monitors mempool for opportunities
-2. AI agent analyzes with market data plugins
-3. Executes swap via 1inch if profitable
-4. Logs results to webhook
+Leverage Somnia's 10,000+ TPS:
+1. Monitor price differences across multiple DEXs
+2. AI agent identifies arbitrage opportunities
+3. Executes simultaneous buy/sell on Somnia
+4. Profits from price discrepancies instantly
+5. Speed only possible on Somnia's infrastructure
 
-### Example 3: NFT Minting Automation
+### Example 3: Automated Governance Participant
 
-Create a workflow that:
-1. Scrapes NFT project website for mint status
-2. Extracts mint data with AI
-3. Executes mint transaction when live
-4. Notifies via Telegram
+Create a DAO automation agent:
+1. Scrapes governance proposals from DAO websites
+2. AI analyzes proposals against voting guidelines
+3. Automatically votes on Somnia governance contracts
+4. Logs voting rationale to permanent storage
+5. Notifies stakeholders of voting activity
 
 ---
 
@@ -442,12 +450,29 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+## Why Somnia for AI Agents?
+
+**Somnia's unique characteristics make it the ideal blockchain for AI agents:**
+
+1. **Speed**: 10,000+ TPS enables real-time agent decision-making
+2. **Cost**: Ultra-low fees allow complex multi-step workflows
+3. **EVM Compatibility**: Access to entire DeFi ecosystem
+4. **Developer Tools**: Robust tooling and documentation
+5. **Scalability**: Handle thousands of concurrent agents
+
+**Our platform maximizes these advantages** by providing:
+- Pre-built workflow templates optimized for Somnia
+- Smart contract marketplace deployed on Somnia
+- Native STT token integration
+- Somnia-specific performance optimizations
+
 ## Acknowledgments
 
-- Built for the [Somnia AI Hackathon](https://somnia.network)
-- Powered by [GOAT SDK](https://github.com/goat-sdk)
+- Built for the [Somnia AI Hackathon](https://somnia.network) - Infra Agents Track
+- Powered by Somnia's high-performance blockchain
 - AI models by Google Gemini and OpenAI
-- Blockchain infrastructure by Viem
+- DeFi integrations via [GOAT SDK](https://github.com/goat-sdk)
+- Web3 infrastructure by Viem
 
 ---
 

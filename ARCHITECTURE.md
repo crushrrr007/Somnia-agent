@@ -2,24 +2,36 @@
 
 ## Project Overview
 
-**Somnia Agent** is an advanced workflow automation platform that combines AI agents with blockchain capabilities for the Somnia AI Hackathon. It enables users to create visual workflows that can:
-- Execute DeFi operations autonomously via AI agents
-- Automate web scraping and data extraction
-- Integrate with 20+ blockchain networks
-- Interact with Telegram and webhooks
-- Schedule recurring tasks with cron expressions
+**Somnia Workflow Automation Platform** is a no-code infrastructure built specifically for the Somnia blockchain, enabling developers and creators to build autonomous AI agents without writing code. Created for the Somnia AI Hackathon (Infra Agents Track), this platform leverages Somnia's high-performance capabilities to enable:
+
+- **AI-Powered DeFi Operations**: Autonomous agents executing on Somnia's 10,000+ TPS blockchain
+- **Browser Automation**: Web scraping and data extraction integrated with on-chain actions
+- **Multi-Chain Compatibility**: Primary support for Somnia with 20+ EVM chain compatibility
+- **Real-Time Automation**: Telegram integration, webhooks, and cron scheduling
+- **On-Chain Marketplace**: Smart contract deployed on Somnia for workflow trading
 
 ## Tech Stack
 
+### Blockchain Layer
+- **Primary**: Somnia Testnet (Chain ID: 50312, Shannon)
+- **Smart Contracts**: Solidity 0.8.20, Hardhat deployment
+- **Web3 Integration**: Viem for EVM interactions
+- **DeFi Tools**: GOAT SDK with 23+ protocol plugins
+- **Multi-Chain**: Support for NEAR Protocol and 20+ EVM chains
+
+### Application Layer
 - **Frontend**: Next.js 14, React 18, TypeScript
 - **UI Components**: Radix UI, TailwindCSS, XYFlow (visual workflow editor)
 - **Backend**: Next.js Server Actions, API Routes
 - **Database**: PostgreSQL with Prisma ORM
-- **AI Models**: Google Gemini 2.0 Flash, OpenAI GPT-4o-mini
-- **Blockchain**: Viem, GOAT SDK, NEAR Protocol
-- **Authentication**: Clerk
-- **Payments**: Stripe
-- **Automation**: Puppeteer (browser automation)
+- **Authentication**: Clerk OAuth
+- **Payments**: Stripe + On-chain STT tokens
+
+### AI & Automation
+- **Primary AI**: Google Gemini 2.0 Flash (autonomous reasoning)
+- **Secondary AI**: OpenAI GPT-4o-mini (data extraction)
+- **Browser Automation**: Puppeteer
+- **Workflow Engine**: Custom phase-based execution system
 
 ---
 

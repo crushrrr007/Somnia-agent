@@ -1,6 +1,8 @@
-# Quick Start Guide - Running the Project
+# Quick Start Guide - Somnia Workflow Platform
 
-This guide will help you get the Somnia Workflow Automation Platform running on your local machine.
+**Build autonomous AI agents on Somnia blockchain in under 10 minutes!**
+
+This guide will help you get the Somnia Workflow Automation Platform running on your local machine. Once running, you'll be able to create AI-powered workflows that execute on Somnia's high-performance blockchain.
 
 ---
 
