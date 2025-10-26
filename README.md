@@ -264,46 +264,69 @@ Authorization: Bearer (Clerk token)
 
 ---
 
-## Somnia Hackathon Integration
+## Somnia AI Hackathon Submission
 
-### Hackathon Track: [Select Your Track]
-- DeFi Agents
-- Gaming Agents
-- Infra Agents
-- Open Track
+### Hackathon Track: Infra Agents
 
-### Submission Checklist
+This project is built for the **Somnia AI Hackathon** (Sep 29 - Oct 28, 2025) in the **Infra Agents** track.
+
+### Why Infra Agents?
+
+Our platform provides infrastructure for developers to build AI agents without coding:
+- Visual workflow builder (SDK-like platform)
+- 17 pre-built task types
+- 23+ DeFi plugin integrations
+- Multi-chain support (21 networks)
+- On-chain marketplace for sharing workflows
+
+### Submission Status
 
 - [x] Public GitHub repository
-- [x] Minimum 2 commits
+- [x] Minimum 2 commits (3+ commits)
 - [x] Detailed README
 - [x] Open-source license (MIT)
-- [ ] Working dApp on Somnia Testnet
-- [ ] Contract addresses documented
-- [ ] Demo video (≤5 minutes)
-- [ ] Pitch deck (5-10 slides)
+- [x] Somnia Testnet integration complete
+- [ ] Smart contract deployed (ready to deploy)
+- [ ] Demo video (script ready)
+- [ ] Pitch deck (outline ready)
 
-### Adding Somnia Chain
+See [HACKATHON_SUBMISSION.md](./HACKATHON_SUBMISSION.md) for complete checklist.
 
-To integrate Somnia blockchain:
+### Somnia Blockchain Integration
 
-1. Add chain definition to `/lib/chains.ts`:
-```typescript
-export const somnia = defineChain({
-  id: [SOMNIA_CHAIN_ID],
-  name: "Somnia",
-  network: "somnia",
-  nativeCurrency: { decimals: 18, name: "SOMI", symbol: "SOMI" },
-  rpcUrls: { default: { http: ["https://rpc.somnia.network"] } },
-  blockExplorers: { default: { name: "Explorer", url: "https://explorer.somnia.network" } },
-});
+**Somnia Testnet (Shannon) is now fully integrated!**
+
+**Network Details:**
+- **Chain ID**: 50312
+- **RPC URL**: https://dream-rpc.somnia.network
+- **Explorer**: https://shannon-explorer.somnia.network
+- **Symbol**: STT
+- **Faucet**: https://testnet.somnia.network/
+
+**Integration Status:**
+- ✅ Somnia chain added to `/lib/chains.ts`
+- ✅ Available in workflow editor chain selector
+- ✅ AI agents can execute on Somnia testnet
+- ✅ Wallet credentials support Somnia
+- ✅ All DeFi plugins compatible with Somnia
+
+### Deployed Smart Contracts
+
+**WorkflowMarketplace** (Ready for deployment)
+- **Contract**: `contracts/WorkflowMarketplace.sol`
+- **Network**: Somnia Testnet (Chain ID: 50312)
+- **Address**: [To be added after deployment]
+- **Explorer**: [To be added after deployment]
+- **Features**: On-chain workflow marketplace, STT payments, revenue sharing
+
+**Deploy Instructions:**
+```bash
+cd contracts
+npm install
+npm run deploy:testnet
 ```
 
-2. Register in chains object and UI
-
-3. Create Somnia-specific GOAT plugin if needed
-
-See [ARCHITECTURE.md](./ARCHITECTURE.md) for detailed instructions.
+See [contracts/README.md](./contracts/README.md) for details.
 
 ---
 

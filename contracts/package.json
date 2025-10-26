@@ -1,0 +1,19 @@
+{
+  "name": "somnia-workflow-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for Somnia Workflow Marketplace",
+  "scripts": {
+    "deploy:testnet": "hardhat run deploy.js --network somniaTestnet",
+    "deploy:local": "hardhat run deploy.js --network localhost",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "verify": "hardhat verify --network somniaTestnet"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
