@@ -21,10 +21,39 @@ import {
     polygon,
     polygonMumbai,
     polygonZkEvm,
-    polygonZkEvmTestnet
+    polygonZkEvmTestnet,
+    defineChain
 } from "viem/chains";
 
+// Somnia Testnet (Shannon) - EVM-compatible blockchain for AI agents
+export const somniaTestnet = defineChain({
+    id: 50312,
+    name: "Somnia Testnet",
+    network: "somnia-testnet",
+    nativeCurrency: {
+        decimals: 18,
+        name: "Somnia Test Token",
+        symbol: "STT",
+    },
+    rpcUrls: {
+        default: {
+            http: ["https://dream-rpc.somnia.network"],
+        },
+        public: {
+            http: ["https://dream-rpc.somnia.network"],
+        },
+    },
+    blockExplorers: {
+        default: {
+            name: "Somnia Explorer",
+            url: "https://shannon-explorer.somnia.network"
+        },
+    },
+    testnet: true,
+});
+
 export const chains = {
+    somniaTestnet: somniaTestnet,
     sepolia: sepolia,
     mainnet: mainnet,
     baseSepolia: baseSepolia,
@@ -49,9 +78,10 @@ export const chains = {
     polygonZkEvm: polygonZkEvm,
     polygonZkEvmTestnet: polygonZkEvmTestnet,
 };
-//11155111 | 1 | 84532 | 8453 | 1329 | 713715 | 1328 | 42161 | 421614 | 43114 | 43113 | 42220 | 44787 | 100 | 10200 | 59144 | 59141 | 10 | 11155420 | 137 | 80001 | 1101 | 1442
+//50312 | 11155111 | 1 | 84532 | 8453 | 1329 | 713715 | 1328 | 42161 | 421614 | 43114 | 43113 | 42220 | 44787 | 100 | 10200 | 59144 | 59141 | 10 | 11155420 | 137 | 80001 | 1101 | 1442
 
 const CHAIN_MAP: Record<string, keyof typeof chains> = {
+    "50312": "somniaTestnet",
     "11155111": "sepolia",
     "1": "mainnet",
     "84532": "baseSepolia",
